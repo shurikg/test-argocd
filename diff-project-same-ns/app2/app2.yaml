@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: diff-project-same-namespace
     server: https://kubernetes.default.svc
-  project: default
+  project: project-2
   source:
     path: diff-project-same-ns/app2/ms
     repoURL: https://github.com/shurikg/test-argocd.git
