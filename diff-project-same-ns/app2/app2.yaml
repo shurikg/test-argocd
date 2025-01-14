@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app2
+  namespace: argocd
+spec:
+  destination:
+    namespace: diff-project-same-namespace
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: diff-project-same-ns/app2/ms
+    repoURL: https://github.com/shurikg/test-argocd.git
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
