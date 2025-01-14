@@ -11,7 +11,7 @@ spec:
   source:
     path: app2/ms
     repoURL: https://github.com/shurikg/test-argocd.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
