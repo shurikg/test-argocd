@@ -13,7 +13,7 @@ spec:
     repoURL: https://github.com/shurikg/test-argocd.git
     targetRevision: main
     directory:
-      include: 'cluster-test/*'
+      include: 'cluster-test/team1_workflows/*.yaml'
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
