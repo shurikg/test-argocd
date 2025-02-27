@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ClusterWorkflowTemplate
+metadata:
+  name: load-configuration-template-1.4.2
+  namespace: argocd
+spec:
+  serviceAccountName: default
+  templates:
+  - name: load-configuration
+    container:
+      image: alpine:3.7
+      command: [echo,"sssss"]

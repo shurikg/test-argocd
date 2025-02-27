@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: team2-workflows-1.7.0
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: cluster
+  source:
+    path: /cluster-test/team2_workflows/1.7.0/
+    repoURL: https://github.com/shurikg/test-argocd.git
+    targetRevision: main
+    recursive: true
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

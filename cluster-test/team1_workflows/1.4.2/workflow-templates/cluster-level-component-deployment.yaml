@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ClusterWorkflowTemplate
+metadata:
+  name: cluster-component-deployment-1.4.2
+  namespace: argocd
+spec:
+  entrypoint: cluster-component-deployment
+  templates:
+  - name: cluster-component-deployment
+    steps:
+    - - name: Load-Configuration
+        templateRef:
+          name: load-configuration-template-1.4.2
+          template: load-configuration
+    - - name: Application-Rendering
+        templateRef:
+          name: app-rendering-template-1.4.2
+          template: app-rendering
+    - - name: Approval
+        template: approve
+    - - name: Application-Deployment
+        templateRef:
+          name: app-deployment-template-1.4.2
+          template: app-deployment
+    - - name: Report
+        templateRef:
+          name: report-template-1.4.2
+          template: report
+  - name: approve
+    suspend: {}
