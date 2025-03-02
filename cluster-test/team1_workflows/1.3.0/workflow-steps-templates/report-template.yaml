@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: report-template-1.3.0
-  namespace: argocd
+  namespace: cluster-test
 spec:
   serviceAccountName: default
   templates:

@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ClusterWorkflowTemplate
 metadata:
   name: app-rendering-template-1.4.2
-  namespace: argocd
+  namespace: cluster-test
 spec:
   serviceAccountName: default
   templates:

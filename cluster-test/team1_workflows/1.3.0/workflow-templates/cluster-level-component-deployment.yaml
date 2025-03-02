@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ClusterWorkflowTemplate
 metadata:
   name: cluster-component-deployment-1.3.0
-  namespace: argocd
+  namespace: cluster-test
 spec:
   entrypoint: cluster-component-deployment
   templates:
