@@ -13,8 +13,8 @@ spec:
     repoURL: https://github.com/shurikg/test-argocd.git
     targetRevision: main
     directory:
-      include: 'team1_workflows/*.yaml'
-      # recurse: true
+      include: '*_workflows_versions_apps.yaml'
+      recurse: true
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
