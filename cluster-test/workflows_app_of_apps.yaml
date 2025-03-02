@@ -14,7 +14,7 @@ spec:
     targetRevision: main
     directory:
       include: 'team1_workflows/*.yaml'
-      recurse: true
+      # recurse: true
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
