@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: cluster-test
     server: https://kubernetes.default.svc
-  project: cluster
+  project: cluster-test
   source:
     path: cluster-test
     repoURL: https://github.com/shurikg/test-argocd.git
