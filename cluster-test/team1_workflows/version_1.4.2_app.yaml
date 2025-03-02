@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster
   source:
-    path: /cluster-test/team1_workflows/1.4.2/
+    path: cluster-test/team1_workflows/1.4.2
     repoURL: https://github.com/shurikg/test-argocd.git
     targetRevision: main
     recursive: true

@@ -10,9 +10,10 @@ spec:
   project: cluster
   source:
     repoURL: https://github.com/shurikg/test-argocd.git
+    path: cluster-test/team2_workflows
     targetRevision: main
     directory:
-      include: 'cluster-test/team2_workflows/version_*.yaml'
+      include: 'version_*.yaml'
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
