@@ -12,7 +12,7 @@ spec:
     path: cluster-test/team1_workflows/1.4.2
     repoURL: https://github.com/shurikg/test-argocd.git
     targetRevision: main
-    recursive: true
+    recurse: true
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
