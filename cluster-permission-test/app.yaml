@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-permission-test
+  namespace: crd-admin
+spec:
+  destination:
+    namespace: crd-admin
+    server: https://kubernetes.default.svc
+  project: crd-admin
+  source:
+    path: cluster-permission-test/yamls
+    repoURL: https://github.com/shurikg/test-argocd.git
+    targetRevision: main
