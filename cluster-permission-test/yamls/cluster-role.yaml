@@ -3,7 +3,7 @@ kind: ClusterRole
 metadata:
   name: pod-reader-shurik
   annotations:
-    dummy: dummy
+    dummy: dummy2
 rules:
 - apiGroups: [""]
   resources: ["pods"]
